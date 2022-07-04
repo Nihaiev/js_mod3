@@ -67,15 +67,22 @@ function compare(firstNumber, secondNumber, operation, result) {
 
     if (isNaN(num1) || isNaN(num2) || isNaN(res)) return false // можна не писати фігурні дужки якщо у нас одна операція
     // console.log('operation', operation);
+    // словник
     const operationsDic = {
         '+': function sum(a,b) {return a+b },
         '-': function minus(a,b) { return a-b},
         '*': function multi(a,b) { return a*b},
         '/': function divide(a,b){return a/b},
     }
-    console.log('operation', operation);
-    console.log('operationsDic[operation]', operationsDic[operation]);
-    console.log(operationsDic[operation](num1, num2));
+    // console.log('operation', operation);
+    // console.log('operationsDic[operation]', operationsDic[operation]);
+    // console.log(operationsDic[operation](num1, num2));
+    if (!operationsDic[operation]) {
+        return 'Invalid operation'
+    }
+
+    const operationResult = operationsDic[operation](num1, num2)
+    return operationResult == res
 
     // switch (operation) {
     //     case '+':
