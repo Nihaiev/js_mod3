@@ -60,7 +60,38 @@
 
 // Example 4
 
-function compare(firstNumber, secondNumber, operation, result) { }
+function compare(firstNumber, secondNumber, operation, result) { 
+    const num1 = Number(firstNumber)
+    const num2 = Number(secondNumber)
+    const res = Number(result)
 
-compare("1", "2", "+", "3");
+    if (isNaN(num1) || isNaN(num2) || isNaN(res)) return false // можна не писати фігурні дужки якщо у нас одна операція
+    // console.log('operation', operation);
+    const operationsDic = {
+        '+': function sum(a,b) {return a+b },
+        '-': function minus(a,b) { return a-b},
+        '*': function multi(a,b) { return a*b},
+        '/': function divide(a,b){return a/b},
+    }
+    console.log('operation', operation);
+    console.log('operationsDic[operation]', operationsDic[operation]);
+    console.log(operationsDic[operation](num1, num2));
+
+    // switch (operation) {
+    //     case '+':
+    //         return num1 + num2 === res
+    //      case '-':
+    //         return num1 - num2 === res
+    //     case '*':
+    //         return num1 * num2 === res
+    //     case '/':
+    //         return num1 / num2 === res
+    //     default:
+    //         return false;
+    // }
+
+
+}
+console.log(compare("1", "2", "-", "-1"));
+// compare("1", "2", "+", "3"); // true
 
