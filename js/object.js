@@ -171,16 +171,17 @@ const playlist = {
     // якщо в середині обєкту потрбіно отримати доступ до властивості цього ж обєкту, обєкт який викликав цю функцію ми використовуємо this. і просто імя властивості
     addTrack(track) {
         this.tracks.push(track); //  ми спочатку запушили 
-        // this.trackCount = this.tracks.length; //.. потім візьми цю властивість trackCount і кинь туди значення довжини цього масиву но це дуже погане рішення
+        // this.trackCount = this.tracks.length; //.. потім візьми цю властивість trackCount і кинь туди значення довжини цього масиву но це дуже погане рішення, краще створити функцію яка повертає довжину масиву
     },
 // ще один метод updateRating(){}
     updateRating(newRating) {
         this.rating = newRating; // отримуємо доступ до rating
     },
-// 
+// робимо фукцція яка повертає довжину масиву
     getTrackCount() {
         return this.tracks.length;
-    }
+    },
+    
 };
 console.log(playlist.getTrackCount());
 playlist.changeName('new name')
