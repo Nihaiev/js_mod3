@@ -21,11 +21,20 @@ const friends = [
  * і коли ми робимо "friend.newprop = 555;" на першій ітерації в цей обєкт добавляється значення newprop = 555; і так далі по ітерації 
  * а після перебору масиву в кожному із обєктів є ця властивість 
  */
-console.table(friends);
+// console.table(friends);
 
 /**
  * ми зараз будемо шукати друга по імені
  * тобто у нас є фукція findFriendByName і ми передаємо туди імя яке хочемо знайти 
  */
+
+const findFriendByName = function (allFriends, name) {
+    for (const friend of allFriends) {
+        console.log(friend);
+    }
+    
+};
 console.log(findFriendByName(friends, 'Poly'));
-console.log(findFriendByName(friends, 'Chelsy'));
+// console.log(findFriendByName(friends, 'Chelsy'));
+
+1:20
