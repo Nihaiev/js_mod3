@@ -10,6 +10,15 @@ const feedback = {
 
 };
 
+const keys = Object.keys(feedback);
+console.log(keys);
+for (const key of keys) {
+    console.log(key);
+    
+}
+
 let totalFeedback = 0;
 
-1:03
+// ця штука дозволяє отримати ключі а уже потім ми перебераємо масив через for of
+
+1
