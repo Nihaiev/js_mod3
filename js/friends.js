@@ -35,6 +35,6 @@ const findFriendByName = function (allFriends, name) {
     
 };
 console.log(findFriendByName(friends, 'Poly'));
-// console.log(findFriendByName(friends, 'Chelsy'));
+// console.log(findFriendByName(friends, 'Chelsy')); 
 
-1:20
+// TODO 1:20
