@@ -37,4 +37,4 @@ const findFriendByName = function (allFriends, name) {
 console.log(findFriendByName(friends, 'Poly'));
 // console.log(findFriendByName(friends, 'Chelsy')); 
 
-// TODO 1:20
+// includes працює тільки з колекцією примітивів, чисел, строк, белвих значень і всі 
