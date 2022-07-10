@@ -54,10 +54,24 @@ const profile = {
     },
 };
 
-const {name, tag, location, avatar } = profile;
+const { name, tag, location, avatar, stats:{ followers, views, likes } } = profile; // stats:{ followers, views, likes } глибока деструкрутризація в глибигу
+// у змінній stats лижить обєкт і ми нище деструктуруємо його
+
 // но що якщо нам треба деструкрувати вкладений обєкт stats
 // ми просто робимо ще одну деструктуризацію
+// const { followers, views, likes } = stats;
 
-const { followers, views, likes } = stats;
 
-console.log(name, tag, location, avatar, followers, views, likes );
+// console.log(name, tag, location, avatar, followers, views, likes);
+
+/**
+ * Деструктуризація масивів 
+ * */
+const rgb = [255, 100, 80];
+
+const authors = {
+    kiwi: 4,
+    poly: 7,
+    ajax: 9,
+    mango: 6,
+};
