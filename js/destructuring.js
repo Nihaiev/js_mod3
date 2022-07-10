@@ -101,19 +101,19 @@ const entries = Object.entries(authors);
  * Операція rest (збір)
  */
 
-const profile = {
-  name: 'Jacques Gluke',
-  tag: 'jgluke',
-  location: 'Ocho Rios, Jamaica',
-  avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/r_oy/128.jpg',
-  stats: {
-    followers: 5603,
-    views: 4827,
-    likes: 1308,
-  },
-};
+// const profile = {
+//   name: 'Jacques Gluke',
+//   tag: 'jgluke',
+//   location: 'Ocho Rios, Jamaica',
+//   avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/r_oy/128.jpg',
+//   stats: {
+//     followers: 5603,
+//     views: 4827,
+//     likes: 1308,
+//   },
+// };
 
-const { name, tag, location, ...restProps } = profile;
+// const { name, tag, location, ...restProps } = profile;
 /**
  * бувають такі випадки коли треба викинути з обєкта визначені властивості  в локільній змінні
  * а всі інші властивості зібрати в якийсь інший обєкт 
@@ -126,3 +126,39 @@ const { name, tag, location, ...restProps } = profile;
 // console.log(name, tag, location);
 // console.log(restProps);
 // console.log(profile);
+
+
+
+/**
+ * Патерн "Обєкт настройок"
+ * - деструктуризація параметрів обєкта в підписі функцій
+ * - rest при дуструктуризації в підписі
+ */
+
+
+/**
+ * 
+ * ми будемо у свої функції отримувати не просто набір аргуемнтів а один обєкт ( це патерн, прийом програмування)
+ * - це називається "Обєкт налаштувань"
+ */
+
+const showProfileInfo = function (userProfile) {
+  const { name, tag, location, ...restProps } = userProfile;
+
+  // console.log(name, tag, location, avatar, followers, views, likes);
+  console.log(restProps);
+};
+
+const profile = {
+  name: 'Jacques Gluke',
+  tag: 'jgluke',
+  location: 'Ocho Rios, Jamaica',
+  avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/r_oy/128.jpg',
+  stats: {
+    followers: 5603,
+    views: 4827,
+    likes: 1308,
+  },
+};
+
+showProfileInfo(profile);
