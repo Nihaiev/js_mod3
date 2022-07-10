@@ -67,7 +67,11 @@ const { name, tag, location, avatar, stats:{ followers, views, likes } } = profi
 /**
  * Деструктуризація масивів 
  * */
+
+// інколи нам треба деструктурувати масив і на відмість від обєктів масиви деструктуруються по порядку 
 const rgb = [255, 100, 80];
+const [red, green, blue] = rgb; // деструктуризація масиву, зліва від = квадратні скобки
+// console.log(red, green, blue);
 
 const authors = {
     kiwi: 4,
@@ -75,3 +79,18 @@ const authors = {
     ajax: 9,
     mango: 6,
 };
+const entries = Object.entries(authors);
+// console.log(entries); //Object.entries повертає масив масивів, де кожен елемент ще один масив нульовим значенням стоїть ключ а першим значення 
+// (const [name, rating] of entries) рівень 3 
+for (const [name, rating] of entries) {
+    // console.log(entry);
+
+    // рівень 2
+    // const [name, rating] = entry;
+
+    // рівень 1
+    // const name = entry[0];
+    // const rating = entry[1]
+
+    console.log(name, rating);
+}
