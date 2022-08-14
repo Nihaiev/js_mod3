@@ -8,3 +8,7 @@ console.log(playlist.tracks); // достукуємося до значення 
 console.log(playlist.name);
 console.log(playlist.trackCount);
 
+const propertyName = 'tracks'; // якщо ключ записаний через змінну 
+
+console.log(playlist.propertyName); //поверне undefined тому що воно не знайде ключ propertyName в playlist
+console.log(playlist[propertyName]); // то тоді доскукаємося до нього через []
