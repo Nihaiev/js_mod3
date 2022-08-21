@@ -35,6 +35,8 @@ const findFriendByName = function (allFriends, name) {
     
 };
 console.log(findFriendByName(friends, 'Poly'));
-// console.log(findFriendByName(friends, 'Chelsy')); 
+// console.log(findFriendByName(friends, 'Chelsy'));
 
-// includes працює тільки з колекцією примітивів, чисел, строк, белвих значень і всі 
+// includes працює тільки з колекцією примітивів, чисел, строк, белвих значень і всі
+
+//1:14
