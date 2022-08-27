@@ -6,10 +6,10 @@
 
 const showProfileInfo = function (userProfile) {
     const {
-        name, tag, location, avatar, stats: { followers, views, likes },
-    } = userProfile
+        name, tag, location, ...restProps} = userProfile
     
-    console.log(name, tag, location, avatar,followers, views, likes);
+    // console.log(name, tag, location, avatar,followers, views, likes);
+    console.log(restProps);
 };
 
 /**
