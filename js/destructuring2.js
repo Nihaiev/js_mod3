@@ -11,7 +11,7 @@ const showProfileInfo = function (userProfile) {
     // console.log(name, tag, location, avatar,followers, views, likes);
     console.log(restProps);
 };
-
+ 
 /**
  * в середині функції ми передаємо обєкт, функція його деструктуризує по властивостям
  * властивості повинні називатись так як хоче функція і біду ї використовувати в себе красиво в середині 
